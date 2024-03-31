@@ -49,6 +49,7 @@
             // 
             // Btn_RecordCompetitionResult
             // 
+            this.Btn_RecordCompetitionResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_RecordCompetitionResult.Location = new System.Drawing.Point(945, 592);
             this.Btn_RecordCompetitionResult.Name = "Btn_RecordCompetitionResult";
             this.Btn_RecordCompetitionResult.Size = new System.Drawing.Size(329, 89);
@@ -159,12 +160,14 @@
             // 
             // Btn_MainPage
             // 
+            this.Btn_MainPage.BackColor = System.Drawing.Color.Lavender;
+            this.Btn_MainPage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Btn_MainPage.Location = new System.Drawing.Point(605, 36);
             this.Btn_MainPage.Name = "Btn_MainPage";
             this.Btn_MainPage.Size = new System.Drawing.Size(275, 87);
             this.Btn_MainPage.TabIndex = 3;
             this.Btn_MainPage.Text = "Main Page";
-            this.Btn_MainPage.UseVisualStyleBackColor = true;
+            this.Btn_MainPage.UseVisualStyleBackColor = false;
             this.Btn_MainPage.Click += new System.EventHandler(this.Btn_UpdateResult_Click);
             // 
             // btn_Competition

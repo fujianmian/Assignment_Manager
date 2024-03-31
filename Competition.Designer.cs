@@ -233,12 +233,13 @@
             // 
             // btn_MainPage
             // 
+            this.btn_MainPage.BackColor = System.Drawing.Color.Lavender;
             this.btn_MainPage.Location = new System.Drawing.Point(51, 34);
             this.btn_MainPage.Name = "btn_MainPage";
             this.btn_MainPage.Size = new System.Drawing.Size(199, 89);
             this.btn_MainPage.TabIndex = 0;
             this.btn_MainPage.Text = "Main Page";
-            this.btn_MainPage.UseVisualStyleBackColor = true;
+            this.btn_MainPage.UseVisualStyleBackColor = false;
             this.btn_MainPage.Click += new System.EventHandler(this.btn_MainPage_Click);
             // 
             // btn_RecommendedStudent

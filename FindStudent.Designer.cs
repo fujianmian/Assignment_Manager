@@ -156,12 +156,13 @@
             // 
             // BtnMainPage
             // 
+            this.BtnMainPage.BackColor = System.Drawing.Color.Lavender;
             this.BtnMainPage.Location = new System.Drawing.Point(256, 36);
             this.BtnMainPage.Name = "BtnMainPage";
             this.BtnMainPage.Size = new System.Drawing.Size(150, 87);
             this.BtnMainPage.TabIndex = 2;
             this.BtnMainPage.Text = "Main Page";
-            this.BtnMainPage.UseVisualStyleBackColor = true;
+            this.BtnMainPage.UseVisualStyleBackColor = false;
             this.BtnMainPage.Click += new System.EventHandler(this.BtnMainPage_Click);
             // 
             // FindStudentForm
