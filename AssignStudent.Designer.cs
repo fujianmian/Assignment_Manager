@@ -31,16 +31,10 @@
             this.DataGridViewRecommended = new System.Windows.Forms.DataGridView();
             this.BtnAssign = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxtStudentID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtStudentName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtCoachName = new System.Windows.Forms.TextBox();
-            this.TxtCoachID = new System.Windows.Forms.TextBox();
-            this.TxtCompetitionID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtCompetitionName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnLogOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,6 +43,12 @@
             this.btn_Competition = new System.Windows.Forms.Button();
             this.btn_MainPage = new System.Windows.Forms.Button();
             this.BtnFindStudent = new System.Windows.Forms.Button();
+            this.LblStudentID = new System.Windows.Forms.Label();
+            this.LblStudentName = new System.Windows.Forms.Label();
+            this.LblCompetitionID = new System.Windows.Forms.Label();
+            this.LblCompetitionName = new System.Windows.Forms.Label();
+            this.LblCoachID = new System.Windows.Forms.Label();
+            this.LblCoachName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewRecommended)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,13 +83,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Student ID:";
             // 
-            // TxtStudentID
-            // 
-            this.TxtStudentID.Location = new System.Drawing.Point(224, 792);
-            this.TxtStudentID.Name = "TxtStudentID";
-            this.TxtStudentID.Size = new System.Drawing.Size(100, 29);
-            this.TxtStudentID.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -98,13 +91,6 @@
             this.label2.Size = new System.Drawing.Size(143, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Student Name:";
-            // 
-            // TxtStudentName
-            // 
-            this.TxtStudentName.Location = new System.Drawing.Point(224, 843);
-            this.TxtStudentName.Name = "TxtStudentName";
-            this.TxtStudentName.Size = new System.Drawing.Size(100, 29);
-            this.TxtStudentName.TabIndex = 5;
             // 
             // label3
             // 
@@ -119,32 +105,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(786, 846);
+            this.label4.Location = new System.Drawing.Point(777, 846);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Coach Name:";
-            // 
-            // TxtCoachName
-            // 
-            this.TxtCoachName.Location = new System.Drawing.Point(916, 846);
-            this.TxtCoachName.Name = "TxtCoachName";
-            this.TxtCoachName.Size = new System.Drawing.Size(100, 29);
-            this.TxtCoachName.TabIndex = 9;
-            // 
-            // TxtCoachID
-            // 
-            this.TxtCoachID.Location = new System.Drawing.Point(916, 792);
-            this.TxtCoachID.Name = "TxtCoachID";
-            this.TxtCoachID.Size = new System.Drawing.Size(100, 29);
-            this.TxtCoachID.TabIndex = 8;
-            // 
-            // TxtCompetitionID
-            // 
-            this.TxtCompetitionID.Location = new System.Drawing.Point(592, 793);
-            this.TxtCompetitionID.Name = "TxtCompetitionID";
-            this.TxtCompetitionID.Size = new System.Drawing.Size(100, 29);
-            this.TxtCompetitionID.TabIndex = 11;
             // 
             // label5
             // 
@@ -154,13 +119,6 @@
             this.label5.Size = new System.Drawing.Size(146, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Competition ID:";
-            // 
-            // TxtCompetitionName
-            // 
-            this.TxtCompetitionName.Location = new System.Drawing.Point(592, 844);
-            this.TxtCompetitionName.Name = "TxtCompetitionName";
-            this.TxtCompetitionName.Size = new System.Drawing.Size(100, 29);
-            this.TxtCompetitionName.TabIndex = 13;
             // 
             // label6
             // 
@@ -245,29 +203,78 @@
             this.BtnFindStudent.UseVisualStyleBackColor = true;
             this.BtnFindStudent.Click += new System.EventHandler(this.BtnFindStudent_Click);
             // 
+            // LblStudentID
+            // 
+            this.LblStudentID.AutoSize = true;
+            this.LblStudentID.Location = new System.Drawing.Point(229, 792);
+            this.LblStudentID.Name = "LblStudentID";
+            this.LblStudentID.Size = new System.Drawing.Size(0, 25);
+            this.LblStudentID.TabIndex = 15;
+            // 
+            // LblStudentName
+            // 
+            this.LblStudentName.AutoSize = true;
+            this.LblStudentName.Location = new System.Drawing.Point(229, 843);
+            this.LblStudentName.Name = "LblStudentName";
+            this.LblStudentName.Size = new System.Drawing.Size(0, 25);
+            this.LblStudentName.TabIndex = 17;
+            // 
+            // LblCompetitionID
+            // 
+            this.LblCompetitionID.AutoSize = true;
+            this.LblCompetitionID.Location = new System.Drawing.Point(601, 792);
+            this.LblCompetitionID.Name = "LblCompetitionID";
+            this.LblCompetitionID.Size = new System.Drawing.Size(0, 25);
+            this.LblCompetitionID.TabIndex = 19;
+            // 
+            // LblCompetitionName
+            // 
+            this.LblCompetitionName.AutoSize = true;
+            this.LblCompetitionName.Location = new System.Drawing.Point(601, 850);
+            this.LblCompetitionName.Name = "LblCompetitionName";
+            this.LblCompetitionName.Size = new System.Drawing.Size(0, 25);
+            this.LblCompetitionName.TabIndex = 20;
+            // 
+            // LblCoachID
+            // 
+            this.LblCoachID.AutoSize = true;
+            this.LblCoachID.Location = new System.Drawing.Point(929, 792);
+            this.LblCoachID.Name = "LblCoachID";
+            this.LblCoachID.Size = new System.Drawing.Size(0, 25);
+            this.LblCoachID.TabIndex = 21;
+            // 
+            // LblCoachName
+            // 
+            this.LblCoachName.AutoSize = true;
+            this.LblCoachName.Location = new System.Drawing.Point(929, 843);
+            this.LblCoachName.Name = "LblCoachName";
+            this.LblCoachName.Size = new System.Drawing.Size(0, 25);
+            this.LblCoachName.TabIndex = 22;
+            // 
             // AssignStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1436, 936);
+            this.Controls.Add(this.LblCoachName);
+            this.Controls.Add(this.LblCoachID);
+            this.Controls.Add(this.LblCompetitionName);
+            this.Controls.Add(this.LblCompetitionID);
+            this.Controls.Add(this.LblStudentName);
+            this.Controls.Add(this.LblStudentID);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.TxtCompetitionName);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TxtCompetitionID);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TxtCoachName);
-            this.Controls.Add(this.TxtCoachID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TxtStudentName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtStudentID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnAssign);
             this.Controls.Add(this.DataGridViewRecommended);
             this.Name = "AssignStudentForm";
             this.Text = "AssignStudent";
+            this.Load += new System.EventHandler(this.AssignStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewRecommended)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -280,16 +287,10 @@
         private System.Windows.Forms.DataGridView DataGridViewRecommended;
         private System.Windows.Forms.Button BtnAssign;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtStudentID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtStudentName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtCoachName;
-        private System.Windows.Forms.TextBox TxtCoachID;
-        private System.Windows.Forms.TextBox TxtCompetitionID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtCompetitionName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnLogOut;
         private System.Windows.Forms.Panel panel1;
@@ -298,5 +299,11 @@
         private System.Windows.Forms.Button btn_Competition;
         private System.Windows.Forms.Button btn_MainPage;
         private System.Windows.Forms.Button BtnFindStudent;
+        private System.Windows.Forms.Label LblStudentID;
+        private System.Windows.Forms.Label LblStudentName;
+        private System.Windows.Forms.Label LblCompetitionID;
+        private System.Windows.Forms.Label LblCompetitionName;
+        private System.Windows.Forms.Label LblCoachID;
+        private System.Windows.Forms.Label LblCoachName;
     }
 }

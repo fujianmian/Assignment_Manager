@@ -110,10 +110,10 @@ namespace Assignment_Manager_v1
 
                 }
             }
-            public void AssignStudent(TextBox TxtStudentID, TextBox TxtCompetitionID)
+            public void AssignStudent(Label LblStudentID, Label LblCompetitionID)
             {
-                string MemberID_ToDelete = TxtStudentID.Text.ToString();
-                string CompetitionID_ToDelete = TxtCompetitionID.Text.ToString();
+                string MemberID_ToDelete = LblStudentID.Text.ToString();
+                string CompetitionID_ToDelete = LblCompetitionID.Text.ToString();
 
                 using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCs"].ToString()))
                 {

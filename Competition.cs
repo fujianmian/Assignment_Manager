@@ -73,6 +73,16 @@ namespace Assignment_Manager_v1
 
         private void btn_AddCompetition_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(lblCompetitionID.Text) ||
+                string.IsNullOrWhiteSpace(lblCompetitionName.Text) ||
+                dateCompetition.Value == null || 
+                string.IsNullOrWhiteSpace(txtTime.Text) ||
+                string.IsNullOrWhiteSpace(txtLocation.Text)) 
+            {
+                MessageBox.Show("Please makesure all data is in the right place.");
+                return;
+            }
             DatabaseHelper dbHelper = new DatabaseHelper();
             List<CompetitionInfo> CompetitionInfoList = dbHelper.AddCompetitionToList(lblCompetitionID, lblCompetitionName,
              dateCompetition, txtTime, txtLocation, LstCompetition);

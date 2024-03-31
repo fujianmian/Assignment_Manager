@@ -48,19 +48,19 @@ namespace Assignment_Manager_v1
             {
                 // 获取选定行的每个单元格的值并放入文本框中
                 DataGridViewRow selectedRow = DataGridViewRecommended.Rows[e.RowIndex];
-                TxtStudentID.Text = selectedRow.Cells["MemberID"].Value.ToString();
-                TxtStudentName.Text = selectedRow.Cells["StudentName"].Value.ToString();
-                TxtCompetitionID.Text = selectedRow.Cells["CompetitionID"].Value.ToString();
-                TxtCompetitionName.Text = selectedRow.Cells["CompetitionName"].Value.ToString();
-                TxtCoachID.Text = selectedRow.Cells["CoachID"].Value.ToString();
-                TxtCoachName.Text = selectedRow.Cells["Usename"].Value.ToString();
+                LblStudentID.Text = selectedRow.Cells["MemberID"].Value.ToString();
+                LblStudentName.Text = selectedRow.Cells["StudentName"].Value.ToString();
+                LblCompetitionID.Text = selectedRow.Cells["CompetitionID"].Value.ToString();
+                LblCompetitionName.Text = selectedRow.Cells["CompetitionName"].Value.ToString();
+                LblCoachID.Text = selectedRow.Cells["CoachID"].Value.ToString();
+                LblCoachName.Text = selectedRow.Cells["Usename"].Value.ToString();
             }
         }
 
         private void BtnAssign_Click(object sender, EventArgs e)
         {
             RecommendStudent dbaction = new RecommendStudent();
-            dbaction.AssignStudent(TxtStudentID, TxtCompetitionID);
+            dbaction.AssignStudent(LblStudentID, LblCompetitionID);
 
             string query_RefreshDataGrid = "SELECT rm.MemberID,ui.userName, rm.CompetitionID, c.CompetitionName, rm.CoachID,cm.userName FROM RecommendedMember rm Join UserInfo ui on rm.MemberID = ui.UserID Join CoachMember cm on rm.CoachID = cm.UserID Join Competition c on rm.CompetitionID = c.CompetitionID";
             dbaction.RefreshDataGrid(DataGridViewRecommended, query_RefreshDataGrid);
@@ -92,6 +92,11 @@ namespace Assignment_Manager_v1
             UpdateResultForm updateResult = new UpdateResultForm();
             this.Hide();
             updateResult.Show();
+        }
+
+        private void AssignStudentForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
