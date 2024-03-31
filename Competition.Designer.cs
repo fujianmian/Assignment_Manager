@@ -191,7 +191,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.BtnLogOut);
             this.panel1.Controls.Add(this.BtnUpdateProfile);
             this.panel1.Controls.Add(this.Btn_UpdateResult);
@@ -265,7 +265,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 936);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(1446, 963);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.dateCompetition);

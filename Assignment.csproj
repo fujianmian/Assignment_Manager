@@ -78,6 +78,12 @@
     <Compile Include="FindStudent.Designer.cs">
       <DependentUpon>FindStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager UI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FindStudent.resx">
       <DependentUpon>FindStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager UI.resx">
       <DependentUpon>Manager UI.cs</DependentUpon>
