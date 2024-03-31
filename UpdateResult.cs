@@ -49,28 +49,35 @@ namespace Assignment_Manager_v1
             String StudentID_ToUpdate = LblUpdate_StudentID.Text.ToString();
             String CompetitionStatus_ToUpdate = RecodComboBox.Text.ToString();
 
-
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCs"].ToString()))
+            if (!string.IsNullOrEmpty(CompetitionID_ToUpdate) && !string.IsNullOrEmpty(StudentID_ToUpdate))
             {
-                con.Open();
-                String query = "DELETE FROM CompetitionMember " +
-                    "WHERE CompetitionID = @CompetitionID and MemberID = @MemberID;";
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCs"].ToString()))
                 {
-                    cmd.Parameters.AddWithValue("@CompetitionID", CompetitionID_ToUpdate);
-                    cmd.Parameters.AddWithValue("@MemberID", StudentID_ToUpdate);
-                    cmd.ExecuteNonQuery();
-                }
-                query = "INSERT INTO CompetitionMember (CompetitionID, MemberID, Status) VALUES (@CompetitionID, @MemberID, @Status);";
+                    con.Open();
+                    String query = "DELETE FROM CompetitionMember " +
+                        "WHERE CompetitionID = @CompetitionID and MemberID = @MemberID;";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@CompetitionID", CompetitionID_ToUpdate);
+                        cmd.Parameters.AddWithValue("@MemberID", StudentID_ToUpdate);
+                        cmd.ExecuteNonQuery();
+                    }
+                    query = "INSERT INTO CompetitionMember (CompetitionID, MemberID, Status) VALUES (@CompetitionID, @MemberID, @Status);";
 
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@Status", CompetitionStatus_ToUpdate);
-                    cmd.Parameters.AddWithValue("@CompetitionID", CompetitionID_ToUpdate);
-                    cmd.Parameters.AddWithValue("@MemberID", StudentID_ToUpdate);
-                    cmd.ExecuteNonQuery();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Status", CompetitionStatus_ToUpdate);
+                        cmd.Parameters.AddWithValue("@CompetitionID", CompetitionID_ToUpdate);
+                        cmd.Parameters.AddWithValue("@MemberID", StudentID_ToUpdate);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Please Select a competition and member first.");
+            }
+            
 
 
             //load data to the data grid view
